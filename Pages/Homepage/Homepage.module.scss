@@ -1,0 +1,69 @@
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #fff;
+    gap: 20px;
+}
+
+.logo {
+    width: 20vmax;
+    animation: animateLogo 1.5s forwards;
+}
+
+.link {
+    opacity: 0;
+    font-family: 'roboto';
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #383636;
+    font-weight: bold;
+    animation: animateLink 1.5s forwards;
+    //animation-delay: 3s;
+}
+
+
+
+
+
+@keyframes animateLogo {
+
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+    
+}
+
+@keyframes animateLink {
+
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+}
+
+
+
+@media(max-width: 800px) {
+
+    .link {
+        font-size: 1rem;
+    }
+    
+}

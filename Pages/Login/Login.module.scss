@@ -1,0 +1,34 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #DDD;
+
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.loginTitle {
+    margin-bottom: 30px;
+}
+
+
+
+@media(max-width: 800px) {
+    .loginForm {
+        width: 70%;
+    }
+
+    
+
+}

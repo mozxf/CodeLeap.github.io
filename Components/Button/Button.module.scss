@@ -1,0 +1,19 @@
+
+
+.button {
+    width: fit-content;
+    border: none;
+    place-self: end;
+    background: black;
+    color: #fff;
+    font-size: 1rem;
+    padding: 7px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button[disabled] {
+    background-color: gray;
+    cursor: initial;
+
+}
