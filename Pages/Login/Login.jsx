@@ -18,7 +18,7 @@ return <section className={styles.container} >
             onChange={({target})=> setUsername(target.value)}
             placeholder="John Doe" />
 
-            <Button disabled={!username} className={styles.loginButton}>Enter</Button>
+            <Button type="link" location="/network" disabled={!username} >Enter</Button>
         </form>
 
     </section>
