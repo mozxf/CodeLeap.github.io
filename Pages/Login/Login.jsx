@@ -1,12 +1,21 @@
 import styles from "./Login.module.scss";
-import { useState } from "react";
+import { useContext } from "react";
 import { Input } from "../../Components/Input/Input";
 import { Button } from "../../Components/Button/Button";
+import {useNavigate} from "react-router-dom";
+import { GlobalContext } from "../../Context/GlobalContent";
 
 export const Login = () => {
-const [username, setUsername] = useState("")
+const {username, setUsername} = useContext(GlobalContext)
+const navigate = useNavigate();
 
-return <section className={styles.container} >
+function handleSubmit(event) {
+    event.preventDefault();
+    navigate("/network")
+}
+
+
+return <section onSubmit={handleSubmit} className={styles.container} >
         <form className={styles.loginForm} action="">
             <h2 className={styles.loginTitle}>Welcome to CodeLeap network!</h2>
             

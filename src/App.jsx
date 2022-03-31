@@ -3,9 +3,11 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import { HomePage } from '../Pages/Homepage/Homepage';
 import { Login } from '../Pages/Login/Login';
 import { Network } from '../Pages/Network/Network';
+import { GlobalStorage  } from '../Context/GlobalContent';
 
 function App() {
   return (
+    <GlobalStorage >
     <BrowserRouter>
     
     <Routes>
@@ -18,6 +20,7 @@ function App() {
     
     
      </BrowserRouter>
+     </GlobalStorage>
   )
 }
 

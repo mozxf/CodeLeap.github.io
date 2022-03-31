@@ -1,7 +1,14 @@
 
 
+
 .input {
     border: 1px solid black;
     border-radius: 4px;
-    padding: 10px 15px;
+    padding: 5px 15px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
