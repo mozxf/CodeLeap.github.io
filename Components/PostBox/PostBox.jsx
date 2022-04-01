@@ -1,8 +1,7 @@
 import styles from "./PostBox.module.scss";
 import { formatDistance } from 'date-fns';
-import { GlobalContext } from "../../Context/GlobalContent";
-import { useContext } from "react";
-
+import Delete from "/src/Assets/Delete.svg"
+import Edit from "/src/Assets/Edit.svg"
 
 export const PostBox = ({title, username, date, content, tools }) => {
 
@@ -16,8 +15,8 @@ export const PostBox = ({title, username, date, content, tools }) => {
                     <span>{title}</span>
                     {tools &&  
                     <div className={styles.toolBox}>
-                        <img src="/src/Assets/Delete.svg" /> 
-                        <img src="/src/Assets/Edit.svg" /> 
+                        <img src={Delete} /> 
+                        <img src={Edit} /> 
                     </div> } 
                     </header>
 
