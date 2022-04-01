@@ -6,7 +6,9 @@ export const Button = ({children, disabled, type, location}) => {
 
 
     if(type === "button") {
-    return <button className={styles.button} disabled={disabled}>{children}</button>
+    return <button className={styles.button} 
+    disabled={disabled}
+    >{children}</button>
     }
 
     if(type === "link") {

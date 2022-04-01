@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 import { GlobalContext } from "../../Context/GlobalContent";
 
 export const Login = () => {
-const {username, setUsername} = useContext(GlobalContext)
+const {username, saveUsername, setUsername} = useContext(GlobalContext)
 const navigate = useNavigate();
 
 function handleSubmit(event) {
@@ -24,7 +24,10 @@ return <section onSubmit={handleSubmit} className={styles.container} >
             label="Please enter your username"
             id="username"
             value={username}
-            onChange={({target})=> setUsername(target.value)}
+            onChange={({target})=> {
+                setUsername(target.value)
+                saveUsername(target.value)
+            }}
             placeholder="John Doe" />
 
             <Button type="link" location="/network" disabled={!username} >Enter</Button>

@@ -1,16 +1,14 @@
 
 
-.postWrapper {
-    border: 2px groove #C0C0C0;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    padding: 30px;
+.postContainer {
+    border: 1px solid #1f1e1e;
     margin: 20px 38px;
 }
 
 
 .postHeader {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     padding: 27px 37px;
     background: #000;
@@ -18,4 +16,37 @@
     font-size: 1.2rem;
     line-height: 1.3rem;
     font-weight: bold;
+}
+
+.toolBox {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.toolBox img {
+    cursor: pointer;
+}
+
+.postWrapper {
+    padding: 30px;
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr  1fr;
+
+}
+
+.postUsername {
+    grid-column: 1/2 ;
+    color: #777;
+    ;
+}
+.postTime {
+    grid-column: 2/3 ;
+    place-self: end;
+    color: #777;
+}
+
+.postContent {
+    grid-column: 1/4;
 }
