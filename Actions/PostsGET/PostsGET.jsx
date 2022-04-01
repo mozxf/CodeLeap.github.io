@@ -19,9 +19,8 @@ useEffect(() => {
 
     }
     getData()
-}, [data])
+}, [])
 
-console.log(data)
 
     if(data)  return data.map((item) => {
         return (

@@ -9,6 +9,7 @@
 .postHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 27px 37px;
     background: #000;
@@ -49,4 +50,34 @@
 
 .postContent {
     grid-column: 1/4;
+    word-break: break-all;
+}
+
+@media(max-width: 500px) {
+
+    .postContainer {
+        margin: 10px 15px;
+    }
+
+.postWrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        text-align: start;
+        gap: 10px;
+    }
+.postUsername {
+    grid-column: 1/2;
+    
+}
+
+.postTime {
+    grid-column: 2/3;
+    place-self: start;
+}
+
+.postContent {
+    grid-column: 1/-1;
+    grid-row: 2;
+}
+
 }

@@ -17,7 +17,6 @@ export const ContentPost = () => {
 
    
 
-    console.log(JSON.stringify(postData))
 
     function handleSubmit(event) {
         event.preventDefault();
