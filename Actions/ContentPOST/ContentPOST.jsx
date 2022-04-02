@@ -11,38 +11,46 @@ export const ContentPost = () => {
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
 
-    const postData = {
-       content:message, title, username 
+    
+
+    async function sendData() {
+        const postData = {
+            content:message, title, username 
+         }
+
+        const options = {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            
+            body: JSON.stringify(postData)
     }
 
+        const response = await fetch('https://dev.codeleap.co.uk/careers/', options);
+        console.log(response)
+
+        const json = await response.json();
+        console.log(json)
+
+       
+        
+        setTitle("")
+        setMessage("")
+    setRender(render => ++render)
+
+
+    }
    
 
 
     function handleSubmit(event) {
         event.preventDefault();
 
-            const options = {
-                method: "POST",
-                headers: {
-                    "Content-Type" : "application/json"
-                },
-                
-                body: JSON.stringify(postData)
-        }
+        
+        sendData()
 
-            fetch('https://dev.codeleap.co.uk/careers/', options)
-
-            .then(response => {
-                console.log(response)
-                return response.json()
-            })
-
-            .then(json => {
-                console.log(json)
-            })
-            setTitle("")
-            setMessage("")
-        setRender(render => ++render)
+           
     }
 
 

@@ -2,7 +2,6 @@ import {useState, useEffect} from "react"
 import { PostBox } from "../../Components/PostBox/PostBox"
 import { GlobalContext } from "../../Context/GlobalContent";
 import { useContext } from "react";
-import { set } from "date-fns";
 
 export const PostsGET = () => {
     const [data, setData] = useState([]);
@@ -38,8 +37,8 @@ console.log(data)
         username={item.username}
         date={item.created_datetime} 
         content={item.content}
-        id={item.id}
         tools={localUser === item.username}
+        id={item.id}
          />)
     })
 
