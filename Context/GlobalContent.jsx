@@ -4,6 +4,8 @@ export const GlobalContext = createContext();
 
 export const GlobalStorage = ({children}) => {
     const [username, setUsername] = useState('')
+    const [render, setRender] = useState(0);
+    const [modal, setModal] = useState(false)
 
     function saveUsername(user) {
         setUsername(user)
@@ -19,7 +21,7 @@ export const GlobalStorage = ({children}) => {
     }, [localUser])
    
 
-return <GlobalContext.Provider value={{username, saveUsername, setUsername}} >
+return <GlobalContext.Provider value={{username, saveUsername, setUsername, render, setRender, modal, setModal}} >
 
     {children}
 </GlobalContext.Provider>

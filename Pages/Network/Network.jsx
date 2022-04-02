@@ -1,11 +1,14 @@
 import styles from "./Network.module.scss";
 import { ContentPost } from "../../Actions/ContentPOST/ContentPOST";
 import { PostsGET } from "../../Actions/PostsGET/PostsGET";
+import { PostDELETE } from "../../Actions/PostDELETE/PostDELETE";
+
+import { GlobalContext } from "../../Context/GlobalContent";
+import { useContext } from "react";
+
 
 export const Network = () => {
-
-
-
+const {modal} = useContext(GlobalContext)
 
 
     return  (
@@ -18,6 +21,7 @@ export const Network = () => {
           
             
             </main>
+            <PostDELETE show={modal} />
         </section>
     )
 }

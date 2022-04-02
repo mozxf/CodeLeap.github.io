@@ -7,7 +7,7 @@ import { GlobalContext } from "../../Context/GlobalContent"
 import { useState, useContext, useEffect } from "react"
 
 export const ContentPost = () => {
-    const {username} = useContext(GlobalContext);
+    const {username, setRender} = useContext(GlobalContext);
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
 
@@ -42,7 +42,7 @@ export const ContentPost = () => {
             })
             setTitle("")
             setMessage("")
-        
+        setRender(render => ++render)
     }
 
 

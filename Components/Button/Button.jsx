@@ -2,12 +2,14 @@ import styles from "./Button.module.scss"
 import { Link } from "react-router-dom"
 
 
-export const Button = ({children, disabled, type, location}) => {
+export const Button = ({children, disabled, onClick, type, location}) => {
 
 
     if(type === "button") {
-    return <button className={styles.button} 
+    return <button 
+    className={styles.button} 
     disabled={disabled}
+    onClick={onClick}
     >{children}</button>
     }
 

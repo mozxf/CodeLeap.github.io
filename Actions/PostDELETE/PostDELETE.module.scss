@@ -1,0 +1,33 @@
+
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    left: 0px;
+    top: 0px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(1, 1, 1, 0.397);
+
+}
+
+.modal {
+    background: #fff;
+    width: 35%;
+    height: 30%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.wrapper{
+    display: flex;
+    gap: 10px;
+    place-self: end;
+}
