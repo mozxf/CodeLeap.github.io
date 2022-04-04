@@ -1,0 +1,47 @@
+
+
+.modalWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(119, 119, 119, 0.800);
+    animation: animeModal .3s forwards;
+
+}
+
+.formPatch {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px;
+    background: #fff;
+    width: 40%;
+    min-width: 300px;
+}
+
+.formPatchTitle {
+    font-size: 1.2rem;
+}
+
+@keyframes animeModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media(max-width: 1000px) {
+    .formPatch {
+        width: 60%;
+    }
+
+}

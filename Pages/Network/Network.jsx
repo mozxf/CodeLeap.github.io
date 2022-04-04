@@ -5,10 +5,11 @@ import { PostDELETE } from "../../Actions/PostDELETE/PostDELETE";
 
 import { GlobalContext } from "../../Context/GlobalContent";
 import { useContext } from "react";
+import { PostPATCH } from "../../Actions/PostPATCH/PostPATCH";
 
 
 export const Network = () => {
-const {modal} = useContext(GlobalContext)
+const {deleteId, editId} = useContext(GlobalContext)
 
 
     return  (
@@ -21,7 +22,8 @@ const {modal} = useContext(GlobalContext)
           
             
             </main>
-            <PostDELETE show={modal} />
+            <PostDELETE show={deleteId} />
+            <PostPATCH show={editId} />
         </section>
     )
 }

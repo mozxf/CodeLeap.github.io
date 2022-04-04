@@ -8,7 +8,7 @@ import { useContext } from "react";
 
 export const PostBox = ({title, username, date, content, id, tools }) => {
 
-    const {setModal} = useContext(GlobalContext)
+    const {setDeleteId, setEditId} = useContext(GlobalContext)
 
 
     const now = new Date();
@@ -21,10 +21,14 @@ export const PostBox = ({title, username, date, content, id, tools }) => {
                     <span>{title}</span>
                     {tools &&  
                     <div className={styles.toolBox}>
+
                         <img onClick={() => 
-                        setModal(id)} 
+                        setDeleteId(id)} 
                         src={Delete} /> 
-                        <img src={Edit} /> 
+
+                        <img 
+                        onClick={() => setEditId(id)}
+                        src={Edit} /> 
                     </div> } 
                     </header>
 

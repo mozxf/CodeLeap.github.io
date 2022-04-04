@@ -10,7 +10,7 @@ export const ContentPost = () => {
     const {username, setRender} = useContext(GlobalContext);
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
-
+    
     
 
     async function sendData() {

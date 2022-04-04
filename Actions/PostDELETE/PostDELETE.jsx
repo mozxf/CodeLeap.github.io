@@ -6,31 +6,33 @@ import { useContext } from "react"
 
 
 export const PostDELETE = ({show}) => {
-    const {modal, setModal, setRender} = useContext(GlobalContext)
-
+    const {deleteId, setDeleteId, setRender} = useContext(GlobalContext)
+   
     async function deleteData() {
 
         const options = {
             method : "DELETE"
         }
 
-      const response = await  fetch(`https://dev.codeleap.co.uk/careers/${modal}/`, options);
+      const response = await  fetch(`https://dev.codeleap.co.uk/careers/${deleteId}/`, options);
 
         console.log(response)
         
 
-        setModal(false)
+        setDeleteId("")
         setRender((render) => render + 1)
 
         }
 
-    if(show) {return <section className={ styles.container}>
-        <div className={styles.modal }>
+
+         if(show) {return <section onClick={() => {setDeleteId("") }} 
+         className={ styles.container}>
+        <div  onClick={event => event.stopPropagation()} className={styles.modal }>
             <h2 className={styles.modalTitle}>Are you sure you want to delete this item?</h2>
             <div className={styles.wrapper}>
-                <Button className={styles.deleteModalButton} onClick={() => setModal(false)} type="button">Cancel</Button>
+                <Button className={styles.modalButton} onClick={() => setDeleteId("")} type="button">Cancel</Button>
                 
-                <Button className={styles.deleteModalButton}  type="button" onClick={deleteData}
+                <Button className={styles.modalButton}  type="button" onClick={deleteData}
                     
 
                 

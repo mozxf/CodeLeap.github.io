@@ -5,23 +5,30 @@
     width: 100vw;
     height: 100vh;
     position: absolute;
-    z-index: 10;
+    z-index: 5;
     left: 0px;
     top: 0px;
-    align-items: center;
     justify-content: center;
-    background: rgba(1, 1, 1, 0.397);
+    background: rgba(119, 119, 119, 0.800);
+    animation: animeModal .3s forwards;
 
 }
 
 .modal {
+    margin-top: 15vh;
     background: #fff;
     width: 35%;
     min-width: 300px;
+    height: fit-content;
     padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 35px;
+}
+
+.modalTitle {
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 
@@ -32,17 +39,27 @@
     place-self: end;
 }
 
-.deleteModalButton {
+.modalButton {
+    text-transform: initial;
     background: #fff;
     color: black;
     border: 1px solid black;
     transition: .2s;
 }
-.deleteModalButton:hover {
+.modalButton:hover {
 background-color: black;
 color: #fff;
 }
 
+@keyframes animeModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 @media(max-width: 1000px) {
     .modal {
