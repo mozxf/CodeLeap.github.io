@@ -17,11 +17,11 @@
 .modal {
     background: #fff;
     width: 35%;
-    height: 30%;
+    min-width: 300px;
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 35px;
 }
 
 
@@ -30,4 +30,23 @@
     display: flex;
     gap: 10px;
     place-self: end;
+}
+
+.deleteModalButton {
+    background: #fff;
+    color: black;
+    border: 1px solid black;
+    transition: .2s;
+}
+.deleteModalButton:hover {
+background-color: black;
+color: #fff;
+}
+
+
+@media(max-width: 1000px) {
+    .modal {
+        width: 60%;
+    }
+
 }
