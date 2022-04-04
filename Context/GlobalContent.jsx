@@ -12,6 +12,9 @@ export const GlobalStorage = ({children}) => {
         localStorage.setItem("username", user)
     }
 
+    
+
+
     const localUser = localStorage.getItem("username")
     useEffect(() => {
     if(localUser) {
@@ -21,7 +24,7 @@ export const GlobalStorage = ({children}) => {
     }, [localUser])
    
 
-return <GlobalContext.Provider value={{username, saveUsername, setUsername, render, setRender, modal, setModal}} >
+return <GlobalContext.Provider value={{ username, saveUsername, setUsername, render, setRender, modal, setModal}} >
 
     {children}
 </GlobalContext.Provider>

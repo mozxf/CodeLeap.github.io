@@ -29,7 +29,7 @@ export const PostDELETE = ({show}) => {
             <h2 className={styles.modalTitle}>Are you sure you want to delete this item?</h2>
             <div className={styles.wrapper}>
                 <Button onClick={() => setModal(false)} type="button">Cancel</Button>
-                <Button type="button" onClick={deleteData()}
+                <Button type="button" onClick={deleteData}
                     
 
                 
