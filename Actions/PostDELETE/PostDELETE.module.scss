@@ -1,4 +1,4 @@
-
+@import "/src/variables.module.scss";
 
 .container {
     display: flex;
@@ -9,21 +9,21 @@
     left: 0px;
     top: 0px;
     justify-content: center;
-    background: rgba(119, 119, 119, 0.800);
+    background: $gray-1-80;
     animation: animeModal .3s forwards;
 
 }
 
 .modal {
     margin-top: 15vh;
-    background: #fff;
+    background: $white;
     width: 35%;
-    min-width: 300px;
+    min-width: calc($size-30px * 10);
     height: fit-content;
-    padding: 30px;
+    padding: $size-30px;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 2.1875rem;
 }
 
 .modalTitle {
@@ -35,20 +35,20 @@
 
 .wrapper{
     display: flex;
-    gap: 10px;
+    gap: 0.625rem;
     place-self: end;
 }
 
 .modalButton {
     text-transform: initial;
-    background: #fff;
-    color: black;
-    border: 1px solid black;
+    background: $white;
+    color: $black;
+    border: 1px solid $black;
     transition: .2s;
 }
 .modalButton:hover {
-background-color: black;
-color: #fff;
+background-color: $black;
+color: $white;
 }
 
 @keyframes animeModal {

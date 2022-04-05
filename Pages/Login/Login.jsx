@@ -1,9 +1,12 @@
 import styles from "./Login.module.scss";
-import { useContext } from "react";
 import { Input } from "../../Components/Input/Input";
 import { Button } from "../../Components/Button/Button";
-import {useNavigate} from "react-router-dom";
 import { GlobalContext } from "../../Context/GlobalContent";
+
+import { useContext } from "react";
+import {useNavigate} from "react-router-dom";
+
+
 
 export const Login = () => {
 const {username, saveUsername, setUsername} = useContext(GlobalContext)

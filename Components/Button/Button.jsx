@@ -15,7 +15,11 @@ export const Button = ({children, className, disabled, onClick, type, location, 
     }
 
     if(type === "link") {
-        return <Link to={location} className={styles.button} disabled={disabled}>{children}</Link>
+        return <Link to={location} 
+        className={styles.button+ " "  + className} 
+        disabled={disabled}
+        {...props}
+        >{children}</Link>
 
 
     }

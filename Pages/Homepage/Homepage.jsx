@@ -5,10 +5,6 @@ import { Link } from "react-router-dom";
 
 export const HomePage = () => {
 
-
-
-    
-
     return (
         <section className={styles.container}>
             <img className={styles.logo}  src={logo}/>

@@ -6,7 +6,7 @@ import { useContext } from "react"
 
 
 export const PostDELETE = ({show}) => {
-    const {deleteId, setDeleteId, setRender} = useContext(GlobalContext)
+    const {deleteId, setDeleteId, setRender, postedMessage, setPostedMessage} = useContext(GlobalContext)
    
     async function deleteData() {
 
@@ -14,9 +14,10 @@ export const PostDELETE = ({show}) => {
             method : "DELETE"
         }
 
-      const response = await  fetch(`https://dev.codeleap.co.uk/careers/${deleteId}/`, options);
+      const response = await fetch(`https://dev.codeleap.co.uk/careers/${deleteId}/`, options);
 
-        console.log(response)
+
+        response.ok && setPostedMessage("delete")
         
 
         setDeleteId("")
@@ -25,18 +26,28 @@ export const PostDELETE = ({show}) => {
         }
 
 
-         if(show) {return <section onClick={() => {setDeleteId("") }} 
-         className={ styles.container}>
-        <div  onClick={event => event.stopPropagation()} className={styles.modal }>
-            <h2 className={styles.modalTitle}>Are you sure you want to delete this item?</h2>
-            <div className={styles.wrapper}>
-                <Button className={styles.modalButton} onClick={() => setDeleteId("")} type="button">Cancel</Button>
-                
-                <Button className={styles.modalButton}  type="button" onClick={deleteData}
-                    
+         if(show) {
+            return <section 
+            onClick={() => {setDeleteId("") }} 
+            className={ styles.container}>
+                <div  
+                    onClick={event => event.stopPropagation()} 
+                     className={styles.modal }>
+                <h2 className={styles.modalTitle}>Are you sure you want to delete this item?</h2>
+                <div className={styles.wrapper}>
 
+                <Button 
+                className={styles.modalButton} 
+                onClick={() => setDeleteId("")} type="button">
+                    Cancel
+                    </Button>
                 
-                    >Ok</Button>
+                <Button 
+                className={styles.modalButton}  
+                type="button" 
+                onClick={deleteData}>
+                    Ok
+                    </Button>
             </div>
         </div>
     </section>}

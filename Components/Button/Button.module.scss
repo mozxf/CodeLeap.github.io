@@ -1,20 +1,20 @@
-
+@import "/src/variables.module.scss";
 
 .button {
     width: fit-content;
     border: none;
     text-decoration: none;
     place-self: end;
-    background: black;
-    color: #fff;
+    background:$black;
+    color: $white;
     font-size: 1rem;
-    padding: 7px 30px;
+    padding: 0.4375rem $size-30px;
     cursor: pointer;
     text-transform: uppercase;
 }
 
 .button[disabled] {
-    background-color: gray;
+    background-color: $gray-1;
     cursor: initial;
 
 }

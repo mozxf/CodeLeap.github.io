@@ -1,10 +1,10 @@
-
+@import "/src/variables.module.scss";
 
 
 .container {
     display: flex;
     justify-content: center;
-    background-color: #ddd;
+    background-color: $gray-3;
     height: 100vh;
 
 }
@@ -16,16 +16,16 @@
     flex-direction: column;
     width: 45%;
     height: 100%;
-    background-color: #fff;
+    background-color: $white;
     overflow: scroll;
 }
 
 .contentHeader {
     width: 100%;
-    padding: 27px 37px;
-    background: #000;
-    color: #fff;
-    font-size: 1.2rem;
+    padding: 1.6875rem 2.3125rem;
+    background: $black;
+    color: $white;
+    font-size: $size-20px;
     line-height: 1.3rem;
     font-weight: bold;
 }

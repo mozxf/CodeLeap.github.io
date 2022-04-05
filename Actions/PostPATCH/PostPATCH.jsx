@@ -7,7 +7,7 @@ import {useState, useContext, useEffect} from 'react'
 
 export const PostPATCH = ({show}) => {
 
-    const {setRender, editId, setEditId} = useContext(GlobalContext);
+    const {setRender, editId, setEditId, postedMessage, setPostedMessage} = useContext(GlobalContext);
     const [editTitle, setEditTitle] = useState("");
     const [editMessage, setEditMessage] = useState("");
 
@@ -16,10 +16,14 @@ export const PostPATCH = ({show}) => {
 
         const json = await response.json()
 
+
         setEditTitle(json.title)
         setEditMessage(json.content)
 
     } 
+
+
+
     useEffect(() => {
 
         editId && getData(editId)
@@ -42,10 +46,9 @@ export const PostPATCH = ({show}) => {
     }
 
         const response = await fetch(`https://dev.codeleap.co.uk/careers/${editId}/`, options);
-        console.log(response)
 
-        const json = await response.json();
-        console.log(json)
+
+        response.ok && setPostedMessage("patch")
 
        
         
@@ -68,6 +71,8 @@ export const PostPATCH = ({show}) => {
            
     }
 
+
+  
 
 
 if(show) return( 

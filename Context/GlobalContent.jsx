@@ -7,6 +7,7 @@ export const GlobalStorage = ({children}) => {
     const [render, setRender] = useState(0);
     const [deleteId, setDeleteId] = useState("")
     const [editId, setEditId] = useState("")
+    const [postedMessage, setPostedMessage] = useState("")
 
     function saveUsername(user) {
         setUsername(user)
@@ -25,7 +26,7 @@ export const GlobalStorage = ({children}) => {
     }, [localUser])
    
 
-return <GlobalContext.Provider value={{ username, saveUsername, setUsername, render, setRender, deleteId, setDeleteId, editId, setEditId}} >
+return <GlobalContext.Provider value={{ username, saveUsername, setUsername, render, setRender, deleteId, setDeleteId, editId, setEditId, postedMessage, setPostedMessage}} >
 
     {children}
 </GlobalContext.Provider>

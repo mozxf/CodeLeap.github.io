@@ -1,4 +1,4 @@
-
+@import "/src/variables.module.scss";
 
 .modalWrapper {
     display: flex;
@@ -10,7 +10,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 10;
-    background: rgba(119, 119, 119, 0.800);
+    background: $gray-1-80;
     animation: animeModal .3s forwards;
 
 }
@@ -18,11 +18,11 @@
 .formPatch {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    padding: 30px;
-    background: #fff;
+    gap: 1.5625rem;
+    padding: $size-30px;
+    background: $white;
     width: 40%;
-    min-width: 300px;
+    min-width: calc($size-30px * 10);
 }
 
 .formPatchTitle {

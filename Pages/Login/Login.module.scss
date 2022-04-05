@@ -1,25 +1,25 @@
-
+@import "/src/variables.module.scss";
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #DDD;
+    background-color: $gray-3;
 
 }
 
 .loginForm {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     width: 35%;
     padding: 2rem;
-    background-color: #fff;
+    background-color: $white;
 }
 
 .loginTitle {
-    margin-bottom: 30px;
+    margin-bottom: $size-30px;
 }
 
 
@@ -27,6 +27,7 @@
 @media(max-width: 800px) {
     .loginForm {
         width: 70%;
+        padding: 1.5rem;
     }
 
     

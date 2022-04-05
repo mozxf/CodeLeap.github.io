@@ -4,12 +4,13 @@ import { Input } from "../../Components/Input/Input"
 import { Button } from "../../Components/Button/Button"
 import { GlobalContext } from "../../Context/GlobalContent"
 
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 
-export const ContentPost = () => {
-    const {username, setRender} = useContext(GlobalContext);
+export const ContentPOST = () => {
+    const {username, setRender, setPostedMessage} = useContext(GlobalContext);
     const [title, setTitle] = useState("");
     const [message, setMessage] = useState("");
+    
     
     
 
@@ -28,29 +29,24 @@ export const ContentPost = () => {
     }
 
         const response = await fetch('https://dev.codeleap.co.uk/careers/', options);
-        console.log(response)
 
-        const json = await response.json();
-        console.log(json)
 
-       
+       response.ok && setPostedMessage("post")
+
         
         setTitle("")
         setMessage("")
-    setRender(render => ++render)
+        setRender(render => ++render)
 
 
     }
    
+    
 
 
     function handleSubmit(event) {
         event.preventDefault();
-
-        
         sendData()
-
-           
     }
 
 

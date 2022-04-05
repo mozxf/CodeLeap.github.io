@@ -1,12 +1,12 @@
-
+@import "/src/variables.module.scss";
 
 .formPost {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin: 45px 38px 35px;
-    padding: 30px;
-    border: 1px solid #1f1e1e;
+    gap: 1.5625rem;
+    margin: 2.8125rem 2.375rem 2.1875rem;
+    padding: $size-30px;
+    border: 1px solid $gray-0;
 }
 
 .formPostTitle {
@@ -16,7 +16,7 @@
 @media(max-width: 500px) {
 
     .formPost {
-        margin: 45px 15px 35px;
+        margin: 2.8125rem 1rem 2.1875rem;
     }
 
     

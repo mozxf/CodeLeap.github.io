@@ -22,7 +22,6 @@ useEffect(() => {
     setData(jsonData.results)
 }
 getData()
-console.log(data)
 
 }, [render])
 
